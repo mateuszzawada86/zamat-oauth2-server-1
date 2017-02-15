@@ -23,9 +23,10 @@ class CreateClientCommand extends ContainerAwareCommand
             ->setName('OAuth2:CreateClient')
             ->setDescription('Create a OAuth2 client')
             ->addArgument('identifier', InputArgument::REQUIRED, 'The client identifier')
-            ->addArgument('redirect_uri', InputArgument::REQUIRED, 'The client redirect uris (comma separated)')
             ->addArgument('grant_types', InputArgument::OPTIONAL, 'Grant types to restrict the client to (comma separated)')
             ->addArgument('scopes', InputArgument::OPTIONAL, 'Scopes to restrict the client to (comma separated)')
+            ->addArgument('redirect_uri', InputArgument::REQUIRED, 'The client redirect uris (comma separated)');
+             
         ;
     }
 
